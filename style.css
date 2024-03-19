@@ -101,6 +101,7 @@ body {
   display: flex;
 }
 .top-menu {
+  display: inline-block; /* GW TAMBAH INI */
   font-weight: 600;
   font-size: inherit;
   opacity: 0.8;
