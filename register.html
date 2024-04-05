@@ -25,33 +25,43 @@
       </div>
     </nav>
     <div class="container">
-        <h1>Personal Details</h1>
-        <div class="register">
-            <label for="">Name</label>
-            <input type="text" required>
+      <h1>Form Register</h1>
+      <form action="#">
+        <div class="user-detail">
+          <div class="input-box">
+            <span class="nama">Nama Lengkap</span>
+            <input type="nama" placeholder="Masukan Nama Lengkap Anda" required>
+          </div>
+          <div class="input-box">
+            <span class="email">Email</span>
+            <input type="email" placeholder="Masukan Email Lengkap Anda" required>
+          </div>
+          <div class="input-box">
+            <span class="alamat">Alamat</span>
+            <input type="text" placeholder="Masukan Alamat Lengkap Anda" required>
+          </div>
+          <div class="input-box">
+            <input type="radio" name="gender" id="1">
+            <input type="radio" name="gender" id="2">
+            <input type="radio" name="gender" id="3">
+            <span class="jenis-kelamin">Jenis Kelamin</span>
+            <div class="category">
+              <label for="1">
+                <span class="dot one"></span>
+                <span class="gender">Pria</span>
+              </label>
+              <label for="2">
+                <span class="dot two"></span>
+                <span class="gender">Wanita</span>
+              </label>
+            </div>
+          </div>
         </div>
-        <div class="register">
-            <label for="">Email</label>
-            <input type="email" required>
+        <div class="btn">
+          <a href="#">Submit</a>
         </div>
-        <div class="register">
-            <label for="">Address</label>
-            <textarea name="address" id="" cols="30" rows="10"></textarea>
-        </div>
-        <div class="register">
-            <label for="">Gender</label>
-            <input type="radio" required>
-            <label for="">Male</label>
-            <input type="radio" required>
-            <label for="">Female</label>
-        </div>
-        <div class="register">
-            <label for="">Date Of Birth</label>
-            <input type="date">
-        </div>
-        <a href="#">Submit</a>
+      </form>
     </div>
-
     <footer>
       <div class="footer">
         <div class="icon">

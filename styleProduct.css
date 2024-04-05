@@ -142,9 +142,113 @@ body {
   opacity: 0.7;
   background-color: blue;
   color: #fff;
-
 }
 
 .img {
   border-radius: 10px;
+}
+footer {
+  margin-top: 30px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-color: #cab9b9;
+}
+.footerContainer {
+  width: 100%;
+  padding: 70px 30px 20px;
+}
+.social {
+  display: flex;
+  justify-content: center;
+}
+.social a {
+  text-decoration: none;
+  padding: 10px;
+  background-color: white;
+  margin: 10px;
+  border-radius: 50px;
+}
+.footerNav {
+  margin: 30px 0;
+}
+
+.footerNav ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+.footerNav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.3em;
+  margin: 20px;
+}
+.footerBottom {
+  background-color: aliceblue;
+  padding: 20px;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%; /* Mengubah lebar kontainer agar lebih sesuai dengan perangkat seluler */
+    margin: 0 auto; /* Mengatur margin menjadi auto agar kontainer berada di tengah */
+  }
+
+  .nav .menu {
+    flex-direction: column;
+    gap: 10px; /* Mengurangi jarak antar menu */
+  }
+
+  .nav .menu-item {
+    text-align: center;
+  }
+  .top-product {
+    grid-template-columns: auto; /* Mengubah jumlah kolom menjadi satu pada layar kecil */
+    justify-content: center; /* Pusatkan kartu pada layar kecil */
+    gap: 10px; /* Mengurangi jarak antara kartu */
+    padding-left: 0; /* Menghapus padding kiri */
+    margin-right: 0; /* Menghapus margin kanan */
+  }
+
+  .card {
+    max-width: 100%; /* Kartu mengisi lebar penuh */
+  }
+
+  .nav .brand,
+  .nav .menu,
+  .nav .ctas {
+    width: 100%; /* Mengubah lebar setiap bagian navigasi menjadi 100% */
+  }
+
+  .hero .headline {
+    font-size: 28px; /* Mengurangi ukuran font headline di hero section */
+  }
+
+  .hero .headline .sub {
+    font-size: 16px; /* Mengurangi ukuran font subheadline di hero section */
+  }
+
+  .button-ctas {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footerContainer {
+    padding: 50px 30px 20px; /* Mengurangi padding pada bagian footer */
+  }
+
+  .social a {
+    margin: 5px; /* Mengurangi margin pada ikon media sosial di footer */
+  }
+
+  .footerNav ul {
+    text-align: center;
+    flex-direction: column; /* Menata ul untuk menu footer menjadi vertikal */
+  }
+
+  .footerNav ul li {
+    width: 100%;/* Menengahkan item pada menu footer */
+    margin: 10px 0; /* Mengurangi margin pada item menu footer */
+  }
 }
