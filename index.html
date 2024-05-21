@@ -14,16 +14,21 @@
   </head>
   <body>
     <nav class="nav">
-        <div class="container">
-      <div class="brand">CateringZ</div>
-      <div class="menu">
-        <a class="menu-item menu-item-active" href="">Home</a>
-        <a class="menu-item"  href="product.html">Product</a>
-        <a class="menu-item" href="testimoni.html">Testimonial</a>
-        <a class="menu-item" href="">About Us</a>
-      </div>
-      <div class="ctas">
-        <a class="register" href="">Register</a>
+      <div class="container">
+        <div class="brand">CateringZ</div>
+        <div class="menu">
+          <a class="menu-toggle" href="#"><i class="fas fa-bars"></i></a>
+        <div class="menu-items">
+          <a class="menu-item menu-item-active" href="#">Home</a>
+          <a class="menu-item" href="product.html">Product</a>
+          <a class="menu-item" href="testimoni.html">Testimonial</a>
+          <a class="menu-item" href="#">About Us</a>
+          <a class="menu-item register" href="#">Register</a> 
+        </div>
+        </div>
+        <div class="ctas">
+          <a class="register" href="#">Register</a>
+        </div>
       </div>
     </nav>
     <div class="container">
@@ -65,7 +70,7 @@
 
        <div class="about-cateringz">
         <div class="image-cateringz">
-          <img src="assets/logo.jpeg" alt="">
+          <img src="assets/restourant.png" alt="">
         </div>
         <div class="text-about">
           <h1>Information CateringZ</h1>
@@ -102,5 +107,10 @@
       <p>Copyright &copy;2024 Designed Byy  <span class="designer">Babas</span></p>
     </div>
  </footer>
+ <script>
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+      this.classList.toggle('active');
+    });
+ </script>
   </body>
 </html>

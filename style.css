@@ -1,17 +1,24 @@
+/* Global Styles */
+:root {
+  --primary-color: #001aff;
+  --secondary-color: #cab9b9;
+  --text-color: #000;
+  --background-color: #f9f9f9;
+  --border-radius: 10px;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   font-size: 16px;
-
-  /* background: radial-gradient(rgb(138, 154, 215), #ffd6d6); */
 }
 
 .container {
   width: 1140px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
+
 .nav {
-  margin-top: 58px;
+  padding: 50px 0; /* TODO : INI GW GANTI DARI MARGIN KE PADDING*/
 }
 
 .nav .container {
@@ -21,15 +28,18 @@ body {
 
 .nav .brand,
 .nav .menu,
+
 .nav .ctas {
   width: calc(100% / 3);
 }
+
 
 .nav .brand {
   width: 20%;
   font-size: 22px;
   font-weight: 600;
 }
+
 .nav .menu {
   width: 60%;
   display: flex;
@@ -37,44 +47,102 @@ body {
   align-items: center;
   gap: 50px;
 }
+
 .nav .menu-item {
-  color: #000;
+  color: var(--text-color);
   text-decoration: none;
   opacity: 0.8;
 }
+
 .nav .menu-item:hover {
   opacity: 1;
-  border-bottom: 1px solid blue;
+  border-bottom: 1px solid var(--primary-color);
 }
+
 .nav .menu-item-active {
   opacity: 1;
   font-weight: 600;
 }
+
 .nav .ctas {
   width: 20%;
   text-align: right;
 }
 
-/* //10 itu atas bawah, 25 kiri kanan// */
+
+.nav .register:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+  transition: all 1s ease;
+  font-size: 20px;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.menu-items {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
 .nav .register {
   padding: 10px 25px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 3px;
   text-decoration: none;
   font-weight: 600;
-  color: #000;
+  color: var(--text-color);
 }
-.nav .register:hover {
-  background-color: blue;
-  color: #fff;
-  transition: all 1s ease;
-  font-size: 20px;
+
+.nav .menu-items .register {
+  display: none; 
+}
+
+@media screen and (max-width: 768px) {
+  .menu-items {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 90px; /* TODO : INI GW navbar yang muncul 40 (hasil padding + hasil brand ke bawah)*/
+      left: 0;
+      width: 100%;
+      background-color: var(--background-color);
+      padding: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+  }
+
+  .menu-toggle {
+      display: block;
+  }
+
+  .menu-toggle.active + .menu-items {
+      display: flex;
+  }
+
+  .nav .menu-items .register {
+      display: block;
+  }
+  .nav .ctas {
+      display: none;
+  
+  }
+
+  .nav .menu {
+    width: 60%;
+    align-items: end;
+    margin-bottom: 20px
+  }
+  
 }
 
 .hero {
   text-align: center;
   padding: 135px 0;
 }
+
 .hero .headline {
   font-weight: 36px;
 }
@@ -86,8 +154,8 @@ body {
 
 .primary {
   display: inline-block;
-  background-color: #001aff;
-  color: white;
+  background-color: var(--primary-color);
+  color: #fff;
   border-radius: 100px;
   padding: 12px 17px;
   text-decoration: none;
@@ -95,8 +163,8 @@ body {
 }
 
 .secondary {
-  background-color: aliceblue;
-  color: rgb(6, 6, 6);
+  background-color: var(--secondary-color);
+  color: var(--text-color);
   border-radius: 100px;
   padding: 12px 17px;
   text-decoration: none;
@@ -105,21 +173,25 @@ body {
 .button-ctas {
   margin-top: 35px;
 }
+
 .top {
   display: flex;
 }
+
 .top-menu {
-  display: inline-block; /* GW TAMBAH INI */
+  display: inline-block;
   font-weight: 600;
   font-size: inherit;
   opacity: 0.8;
 }
+
 .top-menu:hover {
   opacity: 1;
-  border-bottom: 2px solid blue;
+  border-bottom: 2px solid var(--primary-color);
   transition: all 0.5s ease;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
 }
+
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 300px;
@@ -247,8 +319,16 @@ footer {
 .footerNav ul {
   display: flex;
   justify-content: center;
-  list-style-type: none;
+  list-style: none; 
+  margin: 0; 
+  padding: 0;
 }
+
+.footerNav li {
+  margin: 0;
+  padding: 0;
+}
+
 .footerNav ul li a {
   color: white;
   text-decoration: none;
@@ -260,8 +340,7 @@ footer {
   padding: 20px;
   text-align: center;
 }
-.footerBottom p {
-}
+
 @media screen and (max-width: 1140px) {
   .container {
     width: 90%;
@@ -303,13 +382,13 @@ footer {
   .image-cateringz img {
     width: 100%;
     padding: 0;
-    margin-bottom: 20px;
   }
   .text-about h1 {
     font-size: 28px;
   }
   .footerNav ul {
     flex-direction: column;
+    align-items: center;
   }
   .footerNav ul li {
     width: 100%;
