@@ -147,108 +147,125 @@ body {
 .img {
   border-radius: 10px;
 }
+
+/* footer */
 footer {
-  margin-top: 30px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  background-color: #cab9b9;
+  bottom: 0;
 }
-.footerContainer {
+.footer {
+  background-color: #000;
+  box-sizing: border-box;
   width: 100%;
-  padding: 70px 30px 20px;
+  text-align: left;
+  font: bold 16px sans-serif;
+  padding: 50px 50px 60px 50px;
+  margin-top: 80px;
+  color: #fff;
 }
-.social {
-  display: flex;
-  justify-content: center;
-}
-.social a {
-  text-decoration: none;
-  padding: 10px;
-  background-color: white;
-  margin: 10px;
-  border-radius: 50px;
-}
-.footerNav {
-  margin: 30px 0;
+.footer .footer-left,
+.footer .footer-center,
+.footer .footer-right {
+  display: inline-block;
+  vertical-align: top;
 }
 
-.footerNav ul {
-  display: flex;
-  justify-content: center;
-  list-style-type: none;
+.footer .footer-left {
+  width: 30%;
 }
-.footerNav ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.3em;
-  margin: 20px;
+.footer h3 {
+  color: #f5f5f5;
+  margin: 0;
+  padding-bottom: 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
-.footerBottom {
-  background-color: aliceblue;
-  padding: 20px;
+
+.footer .footer-left img {
+  width: 25%;
+  vertical-align: middle;
+}
+.footer .footer-left .logo {
+  width: 100%;
+}
+.footer .footer-copyright {
+  color: #8f9296;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+  padding-top: 10%;
+}
+
+.footer .footer-center {
+  width: 35%;
+}
+.footer .footer-center i {
+  background-color: #565050;
+  color: #f5f5f5;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
   text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
 }
-
-@media screen and (max-width: 768px) {
-  .container {
-    width: 90%; /* Mengubah lebar kontainer agar lebih sesuai dengan perangkat seluler */
-    margin: 0 auto; /* Mengatur margin menjadi auto agar kontainer berada di tengah */
-  }
-
-  .nav .menu {
-    flex-direction: column;
-    gap: 10px; /* Mengurangi jarak antar menu */
-  }
-
-  .nav .menu-item {
-    text-align: center;
-  }
-  .top-product {
-    grid-template-columns: auto; /* Mengubah jumlah kolom menjadi satu pada layar kecil */
-    justify-content: center; /* Pusatkan kartu pada layar kecil */
-    gap: 10px; /* Mengurangi jarak antara kartu */
-    padding-left: 0; /* Menghapus padding kiri */
-    margin-right: 0; /* Menghapus margin kanan */
-  }
-
-  .card {
-    max-width: 100%; /* Kartu mengisi lebar penuh */
-  }
-
-  .nav .brand,
-  .nav .menu,
-  .nav .ctas {
-    width: 100%; /* Mengubah lebar setiap bagian navigasi menjadi 100% */
-  }
-
-  .hero .headline {
-    font-size: 28px; /* Mengurangi ukuran font headline di hero section */
-  }
-
-  .hero .headline .sub {
-    font-size: 16px; /* Mengurangi ukuran font subheadline di hero section */
-  }
-
-  .button-ctas {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .footerContainer {
-    padding: 50px 30px 20px; /* Mengurangi padding pada bagian footer */
-  }
-
-  .social a {
-    margin: 5px; /* Mengurangi margin pada ikon media sosial di footer */
-  }
-
-  .footerNav ul {
-    text-align: center;
-    flex-direction: column; /* Menata ul untuk menu footer menjadi vertikal */
-  }
-
-  .footerNav ul li {
-    width: 100%;/* Menengahkan item pada menu footer */
-    margin: 10px 0; /* Mengurangi margin pada item menu footer */
-  }
+.footer .footer-center i.fa-envelope {
+  font-size: 17px;
+  line-height: 38px;
+}
+.footer .footer-center p {
+  display: inline-block;
+  color: #f5f5f5;
+  vertical-align: middle;
+  margin: 0px;
+}
+.footer .footer-center p span {
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 2;
+}
+.footer .footer-center p a {
+  color: rgb(22, 255, 177);
+  text-decoration: none;
+}
+.footer .footer-right {
+  width: 30%;
+}
+.footer .footer-about {
+  line-height: 20px;
+  color: #92999f;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0px;
+}
+.footer .footer-about span {
+  display: block;
+  color: #f5f5f5;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.footer .footer-media {
+  display: flex;
+  margin-top: 10px;
+}
+.footer .footer-media a {
+  display: block;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  background-color: #8f9296;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #f5f5f5;
+  text-align: center;
+  line-height: 50px;
+  margin-right: 3px;
+  margin-bottom: 5px;
+  margin: 5px;
+}
+.footer .footer-media a:hover{
+  background-color: #f5f5f5;
+  color: rgb(22, 255, 177);
 }
