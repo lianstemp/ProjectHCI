@@ -5,16 +5,17 @@ body {
 
 .container {
   width: 1140px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
+
 .nav {
-  margin-top: 58px;
+  padding: 50px 0; /* TODO : INI GW GANTI DARI MARGIN KE PADDING*/
 }
 
 .nav .container {
   display: flex;
   align-items: center;
+  /* position: fixed; */
 }
 
 .nav .brand,
@@ -28,6 +29,7 @@ body {
   font-size: 22px;
   font-weight: 600;
 }
+
 .nav .menu {
   width: 60%;
   display: flex;
@@ -35,32 +37,92 @@ body {
   align-items: center;
   gap: 50px;
 }
+
 .nav .menu-item {
-  color: #000;
+  color: var(--text-color);
   text-decoration: none;
   opacity: 0.8;
 }
+
 .nav .menu-item:hover {
   opacity: 1;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid var(--primary-color);
 }
+
 .nav .menu-item-active {
   opacity: 1;
   font-weight: 600;
 }
+
 .nav .ctas {
   width: 20%;
   text-align: right;
 }
 
-/* //10 itu atas bawah, 25 kiri kanan// */
+.nav .register:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+  transition: all 1s ease;
+  font-size: 20px;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.menu-items {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
 .nav .register {
   padding: 10px 25px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 3px;
   text-decoration: none;
   font-weight: 600;
-  color: #000;
+  color: var(--text-color);
+}
+
+.nav .menu-items .register {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .menu-items {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 90px; /* TODO : INI GW navbar yang muncul 40 (hasil padding + hasil brand ke bawah)*/
+    left: 0;
+    width: 100%;
+    background-color: var(--background-color);
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu-toggle.active + .menu-items {
+    display: flex;
+  }
+
+  .nav .menu-items .register {
+    display: block;
+  }
+  .nav .ctas {
+    display: none;
+  }
+
+  .nav .menu {
+    width: 60%;
+    align-items: end;
+    margin-bottom: 20px;
+  }
 }
 
 .hero {
@@ -144,13 +206,7 @@ body {
   color: #fff;
 }
 
-.testimony {
-  display: flex;
-  margin: 20px;
-  border: 1px solid #ccc;
-  padding: 20px;
-  border-radius: 10px;
-}
+
 
 .profile img {
   width: 100px;
@@ -173,6 +229,56 @@ body {
   cursor: pointer;
 }
 
+/* testimoni */
+
+.testimonials{
+  padding: 40px 0;
+  background: #ffffff;
+  color: #434343;
+  text-align: center;
+}
+.inner{
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 20px;
+}
+.border{
+  width: 160px;
+  height: 6px;
+  background: #6ab04c;
+  margin: 26px auto;
+}
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.col{
+  flex: 33.33%;
+  max-width: 33.33%;
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+.testimoni{
+  background: #ffffff;
+  padding: 30px;
+}
+.testimoni img{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.name{
+  font-size: 20px;
+  text-transform: uppercase;
+  margin: 10px 0;
+}
+.star{
+  color: #ffd700;
+  margin-bottom: 10px;
+}
 /* footer */
 footer {
   bottom: 0;
@@ -293,4 +399,38 @@ footer {
 .footer .footer-media a:hover{
   background-color: #f5f5f5;
   color: rgb(22, 255, 177);
+}
+
+@media screen and (max-width: 800px) {
+  .nav .brand,
+  .nav .menu,
+  .nav .ctas {
+    width: 100%;
+  }
+  .nav .brand {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .nav .menu {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .nav .menu-item {
+    text-align: center;
+  }
+  footer {
+    position: static;
+  }
+  .footer .footer-left,
+  .footer .footer-center,
+  .footer .footer-right{
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: left;
+  }
+  .col{
+    flex: 100%;
+    max-width: 100%;
+  }
 }
